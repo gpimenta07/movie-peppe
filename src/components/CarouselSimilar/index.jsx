@@ -36,10 +36,10 @@ function CarouselPopPerson() {
     <Carousel className="w-full">
       <CarouselContent className="-ml-1 flex-nowrap mb-10">
         {popPerson.map((person, index) => (
-          <CarouselItem key={index} className="basis-1/6">
+          <CarouselItem key={index} className="basis-1/2 xl:basis-1/6">
             <div className="flex flex-col items-center justify-center gap-2">
               <img
-                className="rounded-3xl h-110 cursor-pointer"
+                className="rounded-3xl h-80 xl:h-110 cursor-pointer"
                 src={`https://image.tmdb.org/t/p/w500/${person.profile_path}`}
                 alt=""
               />

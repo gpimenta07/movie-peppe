@@ -118,16 +118,16 @@ function Details() {
           />
         </div>
       </div>
-      <div className="grid grid-cols-2 -mt-30 ml-50 absolute w-[55vw] justify-center">
+      <div className="grid grid-cols-1 xl:grid-cols-2 -mt-30 ml-25 xl:ml-50 w-100 absolute xl:w-[55vw] justify-center">
         <div>
           <img
-            className="w-105  effect rounded-4xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
+            className="w-105 hidden xl:flex effect rounded-4xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
             src={getImages(popularMovies.poster_path)}
             alt=""
           />
         </div>
-        <div className="flex flex-col gap-3 mb-10">
-          <h1 className="text-white text-5xl font-extrabold">
+        <div className="flex flex-col gap-3 mb-0 xl:mb-10 mr-40">
+          <h1 className="text-white text-2xl xl:text-5xl font-extrabold">
             {popularMovies.title}
           </h1>
 
@@ -141,16 +141,16 @@ function Details() {
             ))}
           </div>
 
-          <p className="text-2xl font-medium mt-5  text-white">
+          <p className="xl:text-2xl font-medium mt-5  text-white">
             {popularMovies.overview}
           </p>
 
-          <p className="text-3xl mt-5 text-white font-bold">Créditos</p>
+          <p className="text-3xl mt-5 hidden xl:flex text-white font-bold">Créditos</p>
 
-          <div className="flex items-center justify-center gap-4 mt-10 ml-30">
-            {movieCredits.slice(0, 5).map((artist) => (
+          <div className="flex items-center justify-center gap-4 xl:mt-10 xl:ml-30">
+            {movieCredits.slice(0, 4).map((artist) => (
               <div
-                className="flex flex-col items-center justify-center gap-1"
+                className="hidden xl:flex flex-col items-center justify-center gap-1"
                 key={artist.id}
               >
                 <img
@@ -166,15 +166,15 @@ function Details() {
           </div>
         </div>
       </div>
-      <div className="mt-180 flex flex-col gap-24">
+      <div className="mt-80 xl:mt-180 flex flex-col gap-24">
         {movieVideos.slice(0, 2).map((video) => (
           <div
             key={video.id}
-            className="flex flex-col items-center justify-center gap-20"
+            className="flex flex-col items-center justify-center mb-20 gap-20"
           >
             <p className="text-2xl font-medium text-white">{video.name}</p>
             <iframe
-              className="rounded-4xl"
+              className="rounded-4xl w-80 xl:w-1/2 h-70 xl:h-120 "
               width="50%"
               height="550px"
               src={`https://www.youtube.com/embed/${video.key}`}
@@ -190,7 +190,7 @@ function Details() {
         <Carousel className="w-full">
           <CarouselContent className="-ml-1 flex-nowrap">
             {movieSimilar.map((movie, index) => (
-              <CarouselItem key={index} className=" basis-1/6">
+              <CarouselItem key={index} className="basis-1/2 xl:basis-1/6">
                 <div
                   key={index}
                   className="flex flex-col items-center justify-center gap-2"

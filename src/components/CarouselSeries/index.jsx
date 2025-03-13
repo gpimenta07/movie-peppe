@@ -33,11 +33,11 @@ function CarouselSeries() {
     <Carousel className="w-full">
       <CarouselContent className="-ml-1 flex-nowrap">
         {topSeries.map((series, index) => (
-                  <CarouselItem key={index} className=" basis-1/6">
+                  <CarouselItem key={index} className="basis-1/2 xl:basis-1/6">
             
                   <div key={index} className="flex flex-col items-center justify-center gap-2">
                     
-                          <img className="rounded-3xl h-110 cursor-pointer" src={`https://image.tmdb.org/t/p/w500/${series.poster_path}`} alt="" />
+                          <img className="rounded-3xl h-80 xl:h-110 cursor-pointer" src={`https://image.tmdb.org/t/p/w500/${series.poster_path}`} alt="" />
                           <p className="text-white text-lg font-bold">{series.name}</p>
                     
                   </div>;

@@ -95,13 +95,13 @@ function CarouselSerie() {
       <Carousel className="w-full">
         <CarouselContent className="-ml-1 flex-nowrap">
           {movieGenreId.map((movie, index) => (
-            <CarouselItem key={index} className=" basis-1/6">
+            <CarouselItem key={index} className="basis-1/2 xl:basis-1/6">
               <div
                 key={index}
                 className="flex flex-col items-center justify-center gap-2"
               >
                 <img
-                  className="rounded-3xl h-110 cursor-pointer"
+                  className="rounded-3xl h-80 xl:h-110 cursor-pointer"
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt=""
                 />
@@ -119,13 +119,13 @@ function CarouselSerie() {
       <Carousel className="w-full">
         <CarouselContent className="-ml-1 flex-nowrap">
           {movieGenreIdR.map((movie, index) => (
-            <CarouselItem key={index} className=" basis-1/6">
+            <CarouselItem key={index} className="basis-1/2 xl:basis-1/6">
               <div
                 key={index}
                 className="flex flex-col items-center justify-center gap-2"
               >
                 <img
-                  className="rounded-3xl h-110 cursor-pointer"
+                  className="rounded-3xl h-80 xl:h-110 cursor-pointer"
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt=""
                 />
@@ -143,13 +143,13 @@ function CarouselSerie() {
       <Carousel className="w-full">
         <CarouselContent className="-ml-1 flex-nowrap">
           {movieGenreIdF.map((movie, index) => (
-            <CarouselItem key={index} className=" basis-1/6">
+            <CarouselItem key={index} className="basis-1/2 xl:basis-1/6">
               <div
                 key={index}
                 className="flex flex-col items-center justify-center gap-2"
               >
                 <img
-                  className="rounded-3xl h-110 cursor-pointer"
+                  className="rounded-3xl h-80 xl:h-110 cursor-pointer"
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt=""
                 />
@@ -166,13 +166,13 @@ function CarouselSerie() {
       <Carousel className="w-full">
         <CarouselContent className="-ml-1 flex-nowrap">
           {movieGenreIdA.map((movie, index) => (
-            <CarouselItem key={index} className=" basis-1/6">
+            <CarouselItem key={index} className="basis-1/2 xl:basis-1/6">
               <div
                 key={index}
                 className="flex flex-col items-center justify-center gap-2"
               >
                 <img
-                  className="rounded-3xl h-110 cursor-pointer"
+                  className="rounded-3xl h-80 xl:h-110 cursor-pointer"
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt=""
                 />
@@ -190,13 +190,13 @@ function CarouselSerie() {
       <Carousel className="w-full">
         <CarouselContent className="-ml-1 flex-nowrap">
           {movieGenreIdG.map((movie, index) => (
-            <CarouselItem key={index} className=" basis-1/6">
+            <CarouselItem key={index} className="basis-1/2 xl:basis-1/6">
               <div
                 key={index}
                 className="flex flex-col items-center justify-center gap-2"
               >
                 <img
-                  className="rounded-3xl h-110 cursor-pointer"
+                  className="rounded-3xl h-80 xl:h-110 cursor-pointer"
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt=""
                 />

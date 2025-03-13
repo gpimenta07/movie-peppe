@@ -12,7 +12,7 @@ import { useNavigate } from "react-router";
 function Home() {
   const [popularMovies, setpopularMovies] = useState([]);
   const [moviesVideo, setmoviesVideo] = useState([]);
-  const [trailer, setTrailer] = useState(false);
+  const [trailer, setTrailer] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -34,34 +34,28 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    // Pegar trailer
+    if (!popularMovies.id) return; // Verifica se o ID não é undefined
 
-    if (!popularMovies.id) return;
-
-    const getMoviesVideo = () => {
+    const getMoviesTrailer = () => {
       axios({
         method: "get",
         url: `https://api.themoviedb.org/3/movie/${popularMovies.id}/videos`,
         params: {
           api_key: "e4553f1eb0af7c766ac5a0237ec8baeb",
-          language: "pt-BR",
+          language: "en-US",
         },
       }).then((response) => {
-        setmoviesVideo(response.data.results[0]);
+        setmoviesVideo(response.data.results[0]); // Garante que o trailer seja definido corretamente
       });
     };
 
-    getMoviesVideo();
-  }, [popularMovies]);
+    getMoviesTrailer();
+  }, [popularMovies?.id]);
 
   function clickTrailer() {
     // Mostrar trailer
     setTrailer(!trailer);
   }
-
-  console.log(popularMovies);
-
-  console.log(moviesVideo);
 
   return (
     <div>
@@ -113,11 +107,13 @@ function Home() {
                         <img className="w-8" src={Close} alt="" />
                       </button>
                     </div>
-                    <iframe
-                      width="100%"
-                      height="550px"
-                      src={`https://www.youtube.com/embed/${moviesVideo.key}`}
-                    ></iframe>
+                    {moviesVideo && moviesVideo.key && (
+                      <iframe
+                        width="100%"
+                        height="550px"
+                        src={`https://www.youtube.com/embed/${moviesVideo.key}`}
+                      ></iframe>
+                    )}
                   </div>
                 </div>
               </div>
@@ -125,7 +121,7 @@ function Home() {
 
             <div>
               <img
-                className="w-96 rounded-4xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
+                className="hidden sm:flex w-96 rounded-4xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
                 src={getImages(popularMovies.poster_path)}
                 alt=""
               />

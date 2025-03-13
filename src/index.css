@@ -34,14 +34,15 @@ body {
   background: rgba(0, 0, 0, 0.5); /* Cor de fundo com opacidade */
 }
 
+
 .capaa::before {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   width: 100%;
-
-  background: rgba(0, 0, 0, 0.5); /* Cor de fundo com opacidade */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .capaa::after {
@@ -51,7 +52,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 200px;
-  background-image: linear-gradient(to top, #0f0f0f, rgba(0,0,0,0));
+  background-image: linear-gradient(to top, #000000, rgba(0,0,0,0));
 }
 
 .header::after {
@@ -62,6 +63,19 @@ body {
   position: absolute;
   left: 0;
   bottom: -10px;
+}
+
+.effect {
+  animation: effect 1.5s ease-out forwards; /* Define a animação para o elemento */
+}
+
+@keyframes effect {
+  from {
+    transform: scale(0); /* Começa com a escala 0 */
+  }
+  to {
+    transform: scale(1); /* Finaliza com a escala 1 */
+  }
 }
 
 :root {

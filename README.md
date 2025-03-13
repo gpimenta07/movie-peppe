@@ -1,12 +1,32 @@
-# React + Vite
+# Peppers Movie 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Peppers Movie** é um catálogo de filmes que permite aos usuários explorar, buscar e visualizar detalhes de filmes de forma simples e intuitiva. Este projeto foi desenvolvido como parte de um desafio de desenvolvimento front-end e tem como objetivo oferecer uma interface interativa para facilitar a navegação por uma vasta coleção de filmes.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Exibição de filmes**: A página inicial apresenta uma lista de filmes com imagem, título e ano de lançamento.
+- **Busca por filmes**: Os usuários podem pesquisar filmes por nome para encontrar facilmente o que estão procurando.
+- **Detalhes do filme**: Ao clicar em um filme, o usuário pode visualizar informações adicionais como sinopse, elenco, nota e outros detalhes.
+- **Responsividade**: O design foi desenvolvido para ser totalmente responsivo, garantindo uma boa experiência em dispositivos móveis, tablets e desktops.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **HTML5**: Estruturação e marcação da página.
+- **CSS3**: Estilização da interface e animações.
+- **JavaScript**: Funcionalidades interativas e manipulação de dados.
+- **React.js**: Framework para construção da interface de usuário.
+- **ShadCN UI**: Biblioteca de componentes para criação de interfaces modernas e personalizáveis.
+- **Axios**: Cliente HTTP para fazer requisições à API do TMDb.
+- **API do TMDb (The Movie Database)**: Fonte de dados sobre filmes, como informações detalhadas e imagens.
+
+## Como Rodar o Projeto
+
+### Pré-requisitos
+
+Antes de rodar o projeto, verifique se você tem o **Node.js** e o **npm** instalados. Se não tiver, instale-os a partir do [site oficial do Node.js](https://nodejs.org/).
+
+### Passos para Rodar
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/peppers-movie.git
